@@ -1,0 +1,42 @@
+Day1 Numpy基本操作（数组，列表）
+NumPy（Numerical Python的简称），是科学计算基础的一个库，提供了大量关于科学计算的相关功能，例如，线性变换，数据统计，随机数生成等。其提供的最核心的类型为多维数组类型（ndarray）。
+
+使用方式
+
+可以使用如下的方式来安装numpy库：
+pip install numpy
+# numpy最核心的类型，就是nd-array数组类型。
+a = np.array([1, 2, 3, 4])
+# 创建二维数组对象类型。
+a = np.array([[1, 2, 6], [3, 4, 5]])
+# print(a)
+# 创建数组，数组的元素通过arange区间（参数）来指定。类似于python中的range。
+# 注意：arange指的是array-range，不要认为是英文单词arrange。
+a = np.arange(1, 10, 2)
+# 对于arange，比python中的range更加宽松（宽泛），其增量（步长）值可以是小数。
+a = np.arange(1, 10, 0.5)
+print(a)
+# 创建值全为1的数组。shape指定每个维度的大小（形状）。
+#np.ones(shape=(5,3))
+# 创建值全为1的数组，数组的形状与参数数组的形状相同。
+#np.ones_like(np.array([[1, 2], [3, 4]]))
+# 创建值全为0的数组。shape指定每个维度的大小。
+# np.zeros((3, 2, 3))
+# 创建值全为0的数组，数组的形状与参数数组的形状相同。
+# np.zeros_like(np.array([[1, 2], [3, 4]]))
+# 创建一个数组，数组的初始值是不确定的。（创建一个没有初始化的数组）
+# np.empty(shape=(5, 4, 3))
+# 创建一个数组，数组的初始值是不确定的。（形状由参数数组的形状决定）
+# np.empty_like(np.array([[1, 2], [3, 4]]))
+# 创建一个数组，形状（第1个参数指定）与填充值（初始值）（第二个参数指定）由参数指定。
+# np.full((3, 4), 100)
+# 创建一个数组，第1个参数（一个数组类型）指定数组的形状,第2个参数指定填充值。
+# np.full_like(np.array([[1, 2], [3, 4]]), 500)
+# 创建指定长度的单位矩阵。
+# np.eye(5)
+# np.identity(5)
+# 创建等差数列。start：区间开始点，stop：区间结束点。num：元素的个数。endpoint:是否包含终止点。默认为True。
+# np.linspace(1, 50, 100, endpoint=False)
+# 创建对数（指数）等差数列（即实际值的等比数列）。
+# start：区间开始点，stop：区间结束点。num：元素的个数。endpoint:是否包含终止点。默认为True。base:底数值，默认为10。
+# np.logspace(1, 10, 10, base=2)
